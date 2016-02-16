@@ -63,7 +63,7 @@ var GlobalThroughput = React.createClass({
         }
         return (
             <span>
-                In <strong className="total-throughput">{numeral(this.state.totalIn).format('0,0')}</strong> / Out <strong className="total-throughput">{numeral(this.state.totalOut).format('0,0')}</strong> msg/s
+                Total in <strong className="total-throughput">{numeral(this.state.totalIn).format('0,0')}</strong> / out <strong className="total-throughput">{numeral(this.state.totalOut).format('0,0')}</strong> msg/s
             </span>
 
         );
