@@ -64,12 +64,12 @@ var SavedSearchControls = React.createClass({
     },
     _getEditSavedSearchControls() {
         return (
-		<div></div>
+		<span></span>
 	);
     },
     render() {
         return (
-		<div></div>
+		<span></span>
 	);
     }
 });
