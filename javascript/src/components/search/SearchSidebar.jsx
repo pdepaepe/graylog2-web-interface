@@ -171,7 +171,6 @@ var SearchSidebar = React.createClass({
             });
         var searchTitle = null;
         var moreActions = [
-            <MenuItem key="export" href={SearchStore.getCsvExportURL()}>Export as CSV</MenuItem>
         ];
         if (this.props.searchInStream) {
             searchTitle = <span>{this.props.searchInStream.title}</span>;
