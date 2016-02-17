@@ -60,13 +60,17 @@ var SavedSearchControls = React.createClass({
         this.setState({error: !SavedSearchesStore.isValidTitle(this.props.currentSavedSearch, this.refs.title.getValue())});
     },
     _getNewSavedSearchButtons() {
-        return '';
+        return;
     },
     _getEditSavedSearchControls() {
-        return '';
+        return (
+		<div></div>
+	);
     },
     render() {
-        return '';
+        return (
+		<div></div>
+	);
     }
 });
 
