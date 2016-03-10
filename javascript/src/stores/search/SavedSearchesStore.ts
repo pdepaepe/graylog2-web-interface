@@ -107,8 +107,6 @@ class SavedSearchesStore {
         var promise = $.getJSON(url);
 
         promise.fail((jqXHR, textStatus, errorThrown) => {
-            UserNotification.error("Fetching saved searches failed with status: " + errorThrown,
-                "Could not get saved searches");
         });
 
         return promise;
