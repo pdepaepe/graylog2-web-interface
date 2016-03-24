@@ -51,7 +51,7 @@ var Navigation = React.createClass({
                         }
                         <DropdownButton title={this._systemTitle()} active={this._isActive("/system")}>
                             <MenuItem href={jsRoutes.controllers.SystemController.index(0).url}>Overview</MenuItem>
-                            <MenuItem href={jsRoutes.controllers.NodesController.nodes().url}>Nodes</MenuItem>
+                            { this._isPermitted(['SYSTEM_READ']) && <MenuItem href={jsRoutes.controllers.NodesController.nodes().url}>Nodes</MenuItem> }
                             { this._isPermitted(['INPUTS_READ']) && <MenuItem href={jsRoutes.controllers.InputsController.index().url}>Inputs</MenuItem> }
                             { this._isPermitted(['OUTPUTS_READ']) && <MenuItem href={jsRoutes.controllers.OutputsController.index().url}>Outputs</MenuItem> }
                             { this._isPermitted(['COLLECTORS_READ']) && <MenuItem href={jsRoutes.controllers.CollectorsController.index().url}>Collectors</MenuItem> }
