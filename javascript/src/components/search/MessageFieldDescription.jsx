@@ -54,19 +54,6 @@ var MessageFieldDescription = React.createClass({
     render() {
         var fieldActions = (this.props.disableFieldActions ? null : <div className="message-field-actions pull-right">
             <SplitButton pullRight={true} bsSize="xsmall" title={<i className="fa fa-search-plus"></i>} key={1} onClick={this._addFieldToSearchBar}>
-                <li className="dropdown-submenu left-submenu">
-                    <a href="#">Create extractor for field {this.props.fieldName}</a>
-                    <ul className="dropdown-menu">
-                        <li><a href={this._getNewExtractorRoute("regex")}>Regular expression</a></li>
-                        <li><a href={this._getNewExtractorRoute("regex_replace")}>Replace with regular expression</a></li>
-                        <li><a href={this._getNewExtractorRoute("substring")}>Substring</a></li>
-                        <li><a href={this._getNewExtractorRoute("split_and_index")}>Split &amp; Index</a></li>
-                        <li><a href={this._getNewExtractorRoute("copy_input")}>Copy Input</a></li>
-                        <li><a href={this._getNewExtractorRoute("grok")}>Grok pattern</a></li>
-                        <li><a href={this._getNewExtractorRoute("json")}>JSON</a></li>
-                    </ul>
-                </li>
-                <MenuItem onClick={this._loadTerms(this.props.fieldName)}>Show terms of {this.props.fieldName}</MenuItem>
             </SplitButton>
         </div>);
 
