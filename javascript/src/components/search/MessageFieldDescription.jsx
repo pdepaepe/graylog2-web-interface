@@ -53,8 +53,7 @@ var MessageFieldDescription = React.createClass({
     },
     render() {
         var fieldActions = (this.props.disableFieldActions ? null : <div className="message-field-actions pull-right">
-            <Button pullRight={true} bsSize="xsmall" title={<i className="fa fa-search-plus"></i>} key={1} onClick={this._addFieldToSearchBar}>
-            </Button>
+            <Button pullRight={true} bsSize="xsmall" title="Search term" key={1} onClick={this._addFieldToSearchBar}><i className="fa fa-search-plus"></i></Button>
         </div>);
 
         var className = this.props.fieldName === 'message' || this.props.fieldName === 'full_message' ? 'message-field' : '';
